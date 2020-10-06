@@ -1,0 +1,32 @@
+<table>
+    <tr>
+      <th></th>
+      <% @all_fuels.each do |fuel| %>
+        <th><%= fuel.name %></th>
+      <% end %>
+    </tr>
+     <tr>
+      <td>Объем цистерны</td>
+      <% @all_fuels.each do |fuel| %>
+        <td><%= fuel.max_volume %></td>
+      <% end %>
+     </tr>
+     <tr>
+      <td>Наполненность</td>
+      <% @all_fuels.each do |fuel| %>
+        <td><%= fuel.fullness %></td>
+      <% end %>
+     </tr>
+     <tr>
+      <td>Тип топлива</td>
+      <% @all_fuels.each do |fuel| %>
+        <td><%= fuel.type %></td>
+      <% end %>
+     </tr>
+     <tr>
+      <th></th>
+      <% @all_fuels.each do |fuel| %>
+        <th><input type="checkbox"></th>
+      <% end %>
+    </tr>
+</table>

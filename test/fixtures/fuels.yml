@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  max_volume: 1
+  fullness: 9.99
+  type: 
+
+two:
+  max_volume: 1
+  fullness: 9.99
+  type: 

@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_06_173710) do
+ActiveRecord::Schema.define(version: 2020_11_14_133145) do
 
   create_table "fuels", force: :cascade do |t|
     t.integer "max_volume", null: false
     t.decimal "fullness", null: false
-    t.string "type"
+    t.string "type_fuel"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"

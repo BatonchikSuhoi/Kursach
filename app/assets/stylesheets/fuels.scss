@@ -20,3 +20,33 @@ table {
     th:first-child, td:first-child {
     text-align: left;
 }
+
+.nav-buttons {
+    margin-top: 15px;
+}
+
+.add {
+    display: none;
+    margin-top: 20px;
+}
+ 
+.update {
+    display: none;
+    margin-top: 20px;
+}
+
+.update input {
+    margin: 5px;
+}
+
+.update .btn {
+    margin: 5px;
+}
+
+.add input {
+    margin: 5px;
+}
+
+.add .btn {
+    margin: 5px;
+}

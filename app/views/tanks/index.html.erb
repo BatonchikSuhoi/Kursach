@@ -1,50 +1,47 @@
 <table>
     <tr>
       <th></th>
-      <% @all_fuels.each do |fuel| %>
-        <th><%= fuel.name %></th>
+      <% @all_tanks.each do |tank| %>
+        <th><%= tank.id %></th>
       <% end %>
     </tr>
      <tr>
       <td>Объем цистерны</td>
-      <% @all_fuels.each do |fuel| %>
-        <td><%= fuel.max_volume %></td>
+      <% @all_tanks.each do |tank| %>
+        <td><%= tank.max_volume %></td>
       <% end %>
      </tr>
      <tr>
       <td>Наполненность</td>
-      <% @all_fuels.each do |fuel| %>
-        <td><%= fuel.fullness %></td>
+      <% @all_tanks.each do |tank| %>
+        <td><%= tank.fullness %></td>
       <% end %>
      </tr>
      <tr>
       <td>Тип топлива</td>
-      <% @all_fuels.each do |fuel| %>
-        <td><%= fuel.type_fuel %></td>
+      <% @all_tanks.each do |tank| %>
+        <td><%= tank.fuel_type_id %></td>
       <% end %>
      </tr>
      <tr>
       <th></th>
-      <% @all_fuels.each do |fuel| %>
-        <th><input id=<%= fuel.id %> class="user-checkbox" type="checkbox"></th>
+      <% @all_tanks.each do |tank| %>
+        <th><input id=<%= tank.id %> class="user-checkbox" type="checkbox"></th>
       <% end %>
     </tr>
 </table>
 <div class="nav-buttons">
   <button class="btn btn-primary append_new" type="submit">Добавить</button>
-  <button class="btn btn-primary" type="submit">Просмотреть</button>
   <button class="btn btn-primary update-note">Редактировать</button>
-  <button class="btn btn-primary delete_fuels">Удалить</button>
+  <button class="btn btn-primary delete_tanks">Удалить</button>
 </div>
 <div class="add">
   <input type="text" class="max-volume"> - "Объем цистерны"<br />
   <input type="text" class="fullness"> - "Наполненность"<br />
-  <input type="text" class="type"> - "Тип топлива"<br />
   <button class="btn btn-success add-new-note" type="submit">Добавить</button>
 </div>
 <div class="update">
   <input type="text" class="u_max-volume"> - "Объем цистерны"<br />
   <input type="text" class="u_fullness"> - "Наполненность"<br />
-  <input type="text" class="u_type"> - "Тип топлива"<br />
   <button class="btn btn-success update-old-note" type="submit">Обновить</button>
 </div>

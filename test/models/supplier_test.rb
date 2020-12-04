@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TanksControllerTest < ActionDispatch::IntegrationTest
+class SupplierTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

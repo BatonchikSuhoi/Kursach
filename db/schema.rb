@@ -10,15 +10,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_14_133145) do
+ActiveRecord::Schema.define(version: 2020_12_04_091844) do
 
-  create_table "fuels", force: :cascade do |t|
-    t.integer "max_volume", null: false
-    t.decimal "fullness", null: false
-    t.string "type_fuel"
+  create_table "fuel_types", force: :cascade do |t|
+    t.string "name"
+    t.integer "supplier_id"
+    t.decimal "cost"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["supplier_id"], name: "index_fuel_types_on_supplier_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
     t.string "name"
+    t.integer "fuel_quantity"
+    t.integer "bill"
+    t.integer "fuel_type_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["fuel_type_id"], name: "index_orders_on_fuel_type_id"
+  end
+
+  create_table "suppliers", force: :cascade do |t|
+    t.string "name"
+    t.string "agent"
+    t.string "agent_phone"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "supplies", force: :cascade do |t|
+    t.integer "quantity"
+    t.integer "fuel_quantity"
+    t.integer "fuel_type_id"
+    t.integer "supplier_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["fuel_type_id"], name: "index_supplies_on_fuel_type_id"
+    t.index ["supplier_id"], name: "index_supplies_on_supplier_id"
+  end
+
+  create_table "tanks", force: :cascade do |t|
+    t.integer "max_volume", null: false
+    t.decimal "fullness", null: false
+    t.integer "fuel_type_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["fuel_type_id"], name: "index_tanks_on_fuel_type_id"
   end
 
 end

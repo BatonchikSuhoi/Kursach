@@ -1,0 +1,26 @@
+<table>
+    <tr>
+      <th></th>
+      <% @all_supplies.each do |supply| %>
+        <th><%= supply.id %></th>
+      <% end %>
+    </tr>
+     <tr>
+      <td>Еоличество топлива</td>
+      <% @all_supplies.each do |supply| %>
+        <td><%= supply.quantity %></td>
+      <% end %>
+     </tr>
+     <tr>
+      <td>Тип топлива</td>
+      <% @all_supplies.each do |supply| %>
+        <td><%= supply.fuel_type_id %></td>
+      <% end %>
+     </tr>
+     <tr>
+      <td>Поставщик</td>
+      <% @all_supplies.each do |supply| %>
+        <td><%= supply.supplier_id %></td>
+      <% end %>
+     </tr>
+</table>

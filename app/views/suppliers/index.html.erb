@@ -1,0 +1,43 @@
+<table>
+    <tr>
+      <th></th>
+      <% @all_suppliers.each do |supplier| %>
+        <th><%= supplier.name %></th>
+      <% end %>
+    </tr>
+     <tr>
+      <td>Представитель</td>
+      <% @all_suppliers.each do |supplier| %>
+        <td><%= supplier.agent %></td>
+      <% end %>
+     </tr>
+     <tr>
+      <td>Номер представителся</td>
+      <% @all_suppliers.each do |supplier| %>
+        <td><%= supplier.agent_phone %></td>
+      <% end %>
+     </tr>
+     <tr>
+      <td>Тип топлива</td>
+      <% @all_suppliers.each do |supplier| %>
+        <td><%= supplier.fuel_type_id %></td>
+      <% end %>
+     </tr>
+</table>
+<div class="nav-buttons">
+  <button class="btn btn-primary append_new" type="submit">Добавить</button>
+  <button class="btn btn-primary update-note">Редактировать</button>
+  <button class="btn btn-primary delete_suppliers">Удалить</button>
+</div>
+<div class="add">
+  <input type="text" class="supplier-type"> - "Имя поставщика"<br />
+  <input type="text" class="supplier-price"> - "Представитель"<br />
+  <input type="text" class="supplier-phone"> - "Телефон представителя"<br />
+  <button class="btn btn-success add-new-note" type="submit">Добавить</button>
+</div>
+<div class="update">
+  <input type="text" class="u_supplier-type"> - "Имя поставщика"<br />
+  <input type="text" class="u_supplier-price"> - "Представитель"<br />
+  <input type="text" class="u_supplier-price"> - "Телефон представителя"<br />
+  <button class="btn btn-success update-old-note" type="submit">Обновить</button>
+</div>

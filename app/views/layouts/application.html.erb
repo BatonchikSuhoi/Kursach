@@ -14,7 +14,16 @@
 
   <body>
     <div class="container">
-     <%= yield %>
+      <div class="header">
+        <div class="header-right">
+          <a href="/tanks">Цистерны</a>
+          <a href="/fuel_types">Типы топлива</a>
+          <a href="#orders">Заказы</a>
+          <a href="/supplies">Поставки</a>
+          <a href="/suppliers">Поставщики</a>
+        </div>
+      </div>
+      <%= yield %>
     </div>
   </body>
 </html>

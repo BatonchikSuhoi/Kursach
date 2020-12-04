@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class FuelTest < ActiveSupport::TestCase
+class OrderTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

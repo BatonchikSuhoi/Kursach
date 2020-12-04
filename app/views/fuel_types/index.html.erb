@@ -1,0 +1,35 @@
+<table>
+    <tr>
+      <th></th>
+      <% @all_fuel_types.each do |fuel_type| %>
+        <th><%= fuel_type.name %></th>
+      <% end %>
+    </tr>
+     <tr>
+      <td>Поставщик</td>
+      <% @all_fuel_types.each do |fuel_type| %>
+        <td><%= fuel_type.supplier_id %></td>
+      <% end %>
+     </tr>
+     <tr>
+      <td>Цена</td>
+      <% @all_fuel_types.each do |fuel_type| %>
+        <td><%= fuel_type.cost %></td>
+      <% end %>
+     </tr>
+</table>
+<div class="nav-buttons">
+  <button class="btn btn-primary append_new" type="submit">Добавить</button>
+  <button class="btn btn-primary update-note">Редактировать</button>
+  <button class="btn btn-primary delete_tanks">Удалить</button>
+</div>
+<div class="add">
+  <input type="text" class="fuel-type"> - "Тип топлива"<br />
+  <input type="text" class="fuel-price"> - "Цена"<br />
+  <button class="btn btn-success add-new-note" type="submit">Добавить</button>
+</div>
+<div class="update">
+  <input type="text" class="u_fuel-type"> - "Тип топлива"<br />
+  <input type="text" class="u_fuel-price"> - "Цена"<br />
+  <button class="btn btn-success update-old-note" type="submit">Обновить</button>
+</div>

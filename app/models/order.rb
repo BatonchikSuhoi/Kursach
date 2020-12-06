@@ -1,3 +1,3 @@
 class Order < ApplicationRecord
-    has_one :fuel_type
+    belongs_to :fuel_type
 end

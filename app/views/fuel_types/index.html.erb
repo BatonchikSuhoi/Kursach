@@ -6,30 +6,30 @@
       <% end %>
     </tr>
      <tr>
-      <td>Поставщик</td>
-      <% @all_fuel_types.each do |fuel_type| %>
-        <td><%= fuel_type.supplier_id %></td>
-      <% end %>
-     </tr>
-     <tr>
       <td>Цена</td>
       <% @all_fuel_types.each do |fuel_type| %>
         <td><%= fuel_type.cost %></td>
       <% end %>
      </tr>
+     <tr>
+      <th></th>
+      <% @all_fuel_types.each do |type| %>
+        <th><input id=<%= type.id %> class="user-checkbox" type="checkbox"></th>
+      <% end %>
+     </tr>
 </table>
 <div class="nav-buttons">
-  <button class="btn btn-primary append_new" type="submit">Добавить</button>
-  <button class="btn btn-primary update-note">Редактировать</button>
-  <button class="btn btn-primary delete_tanks">Удалить</button>
+  <button class="btn btn-primary append-new-fuel-type" type="submit">Добавить</button>
+  <button class="btn btn-primary update-fuel-type">Редактировать</button>
+  <button class="btn btn-primary delete-fuel-type">Удалить</button>
 </div>
 <div class="add">
-  <input type="text" class="fuel-type"> - "Тип топлива"<br />
-  <input type="text" class="fuel-price"> - "Цена"<br />
-  <button class="btn btn-success add-new-note" type="submit">Добавить</button>
+  <input type="text" class="fuel-name"> - "Название топлива"<br />
+  <input type="text" class="fuel-cost"> - "Цена"<br />
+  <button class="btn btn-success add-new-fuel-type" type="submit">Добавить</button>
 </div>
 <div class="update">
-  <input type="text" class="u_fuel-type"> - "Тип топлива"<br />
-  <input type="text" class="u_fuel-price"> - "Цена"<br />
-  <button class="btn btn-success update-old-note" type="submit">Обновить</button>
+  <input type="text" class="u_fuel-name"> - "НАзвание топлива"<br />
+  <input type="text" class="u_fuel-cost"> - "Цена"<br />
+  <button class="btn btn-success update-old-fuel-type" type="submit">Обновить</button>
 </div>

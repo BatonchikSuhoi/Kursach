@@ -8,19 +8,58 @@
      <tr>
       <td>Еоличество топлива</td>
       <% @all_supplies.each do |supply| %>
-        <td><%= supply.quantity %></td>
+        <td><%= supply.fuel_quantity %></td>
       <% end %>
      </tr>
      <tr>
       <td>Тип топлива</td>
       <% @all_supplies.each do |supply| %>
-        <td><%= supply.fuel_type_id %></td>
+        <td><%= fuel_name_by_id(supply.fuel_type_id) %></td>
       <% end %>
      </tr>
      <tr>
       <td>Поставщик</td>
       <% @all_supplies.each do |supply| %>
-        <td><%= supply.supplier_id %></td>
+        <td><%= supplier_name_by_id(supply.supplier_id) %></td>
+      <% end %>
+     </tr>
+     <tr>
+      <th></th>
+      <% @all_supplies.each do |supply| %>
+        <th><input id=<%= supply.id %> class="user-checkbox" type="checkbox"></th>
       <% end %>
      </tr>
 </table>
+<div class="nav-buttons">
+  <button class="btn btn-primary append-new-supply" type="submit">Добавить</button>
+  <button class="btn btn-primary update-supply">Редактировать</button>
+  <button class="btn btn-primary delete-supply">Удалить</button>
+</div>
+<div class="add">
+  <input type="text" class="fuel_quantity"> - "Количество"<br />
+  <select class="fuel_type_id">
+    <% @fuel_types.each do |type| %>
+      <option value=<%= type.id %>><%= type.name %></option>
+    <% end %>
+  </select> - "Тип топлива"<br />
+  <select class="supplier_id">
+    <% @suppliers.each do |supplier| %>
+      <option value=<%= supplier.id %>><%= supplier.name %></option>
+    <% end %>
+  </select> - "Поставщик"<br />
+  <button class="btn btn-success add-new-supply" type="submit">Добавить</button>
+</div>
+<div class="update">
+  <input type="text" class="u_fuel_quantity"> - "Количество"<br />
+  <select class="u_fuel_type_id">
+    <% @fuel_types.each do |type| %>
+      <option value=<%= type.id %>><%= type.name %></option>
+    <% end %>
+  </select> - "Тип топлива"<br />
+  <select class="u_supplier_id">
+    <% @suppliers.each do |supplier| %>
+      <option value=<%= supplier.id %>><%= supplier.name %></option>
+    <% end %>
+  </select> - "Поставщик"<br />
+  <button class="btn btn-success update-old-supplier" type="submit">Обновить</button>
+</div>

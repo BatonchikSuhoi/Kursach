@@ -28,20 +28,21 @@
       <% @all_tanks.each do |tank| %>
         <th><input id=<%= tank.id %> class="user-checkbox" type="checkbox"></th>
       <% end %>
+     </tr>
     </tr>
 </table>
 <div class="nav-buttons">
-  <button class="btn btn-primary append_new" type="submit">Добавить</button>
-  <button class="btn btn-primary update-note">Редактировать</button>
-  <button class="btn btn-primary delete_tanks">Удалить</button>
+  <button class="btn btn-primary append-new-tank" type="submit">Добавить</button>
+  <button class="btn btn-primary update-tank">Редактировать</button>
+  <button class="btn btn-primary delete-tank">Удалить</button>
 </div>
 <div class="add">
   <input type="text" class="max-volume"> - "Объем цистерны"<br />
   <input type="text" class="fullness"> - "Наполненность"<br />
-  <button class="btn btn-success add-new-note" type="submit">Добавить</button>
+  <button class="btn btn-success add-new-tank" type="submit">Добавить</button>
 </div>
 <div class="update">
   <input type="text" class="u_max-volume"> - "Объем цистерны"<br />
   <input type="text" class="u_fullness"> - "Наполненность"<br />
-  <button class="btn btn-success update-old-note" type="submit">Обновить</button>
+  <button class="btn btn-success update-old-tank" type="submit">Обновить</button>
 </div>

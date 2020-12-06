@@ -18,26 +18,26 @@
       <% end %>
      </tr>
      <tr>
-      <td>Тип топлива</td>
+      <th></th>
       <% @all_suppliers.each do |supplier| %>
-        <td><%= supplier.fuel_type_id %></td>
+        <th><input id=<%= supplier.id %> class="user-checkbox" type="checkbox"></th>
       <% end %>
      </tr>
 </table>
 <div class="nav-buttons">
-  <button class="btn btn-primary append_new" type="submit">Добавить</button>
-  <button class="btn btn-primary update-note">Редактировать</button>
-  <button class="btn btn-primary delete_suppliers">Удалить</button>
+  <button class="btn btn-primary append-new-supplier" type="submit">Добавить</button>
+  <button class="btn btn-primary update-supplier">Редактировать</button>
+  <button class="btn btn-primary delete-supplier">Удалить</button>
 </div>
 <div class="add">
-  <input type="text" class="supplier-type"> - "Имя поставщика"<br />
-  <input type="text" class="supplier-price"> - "Представитель"<br />
+  <input type="text" class="supplier-name"> - "Имя поставщика"<br />
+  <input type="text" class="supplier-agent"> - "Представитель"<br />
   <input type="text" class="supplier-phone"> - "Телефон представителя"<br />
-  <button class="btn btn-success add-new-note" type="submit">Добавить</button>
+  <button class="btn btn-success add-new-supplier" type="submit">Добавить</button>
 </div>
 <div class="update">
-  <input type="text" class="u_supplier-type"> - "Имя поставщика"<br />
-  <input type="text" class="u_supplier-price"> - "Представитель"<br />
-  <input type="text" class="u_supplier-price"> - "Телефон представителя"<br />
-  <button class="btn btn-success update-old-note" type="submit">Обновить</button>
+  <input type="text" class="u_supplier-name"> - "Имя поставщика"<br />
+  <input type="text" class="u_supplier-agent"> - "Представитель"<br />
+  <input type="text" class="u_supplier-phone"> - "Телефон представителя"<br />
+  <button class="btn btn-success update-old-supplier" type="submit">Обновить</button>
 </div>

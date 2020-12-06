@@ -1,5 +1,4 @@
 class FuelType < ApplicationRecord
-    has_one :supplier
-    belongs_to :order
-    belongs_to :supply
+    has_many :order
+    has_many :supplies
 end

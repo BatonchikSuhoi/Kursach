@@ -1,7 +1,7 @@
 $(document).ready(() => {
     var i = 2.0;
     var j = 2.0;
-    $('.append_new').on('click', function() {
+    $('.append-new-supply').on('click', function() {
         if($('.update').css('display') == 'block') {
             $('.update').css('display', 'none');
             j = j + 1;
@@ -13,7 +13,7 @@ $(document).ready(() => {
         }
         i = i + 1.0;
     })
-    $('.update-note').on('click', function() {
+    $('.update-supply').on('click', function() {
         if($('.add').css('display') == 'block') {
             $('.add').css('display', 'none');
             i = i + 1;
@@ -26,34 +26,38 @@ $(document).ready(() => {
         j = j + 1.0;
     })
 
-    $('.add-new-note').on('click', function() {
-        let max_volume = $('.max-volume').val();
-        let fullness = $('.fullness').val();
+    $('.add-new-supply').on('click', function() {
+        let quantity = $('.fuel_quantity').val();
+        let fuel_type = $('.fuel_type_id').val();
+        let supplier = $('.supplier_id').val();
         $.ajax({
-            url: '/tanks',
+            url: '/supplies',
             method: 'post',
             data: {
-                max_volume: max_volume,
-                fullness: fullness
+                fuel_quantity: quantity,
+                fuel_type_id: fuel_type,
+                supplier_id: supplier
             },
-            success: (data) => {
+            success: () => {
               window.location.reload();
             }
         });
     })
 
-    $('.update-old-note').on('click', function() {
+    $('.update-old-supply').on('click', function() {
         let userId = $('.user-checkbox:checked').toArray().map(a => a.id)[0];
-        let max_volume = $('.u_max-volume').val();
-        let fullness = $('.u_fullness').val();
+        let quantity = $('.u_fuel_quantity').val();
+        let fuel_type = $('.u_fuel_type_id').val();
+        let supplier = $('.u_supplier_id').val();
         $.ajax({
-            url: '/tanks/' + userId.toString(),
+            url: '/supplies/' + userId.toString(),
             method: 'put',
             data: {
-                max_volume: max_volume,
-                fullness: fullness
+                fuel_quantity: quantity,
+                fuel_type_id: fuel_type,
+                supplier_id: supplier
             },
-            success: (data) => {
+            success: () => {
               window.location.reload();
             }
         });

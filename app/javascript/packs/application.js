@@ -18,5 +18,11 @@ require("channels")
 //= require jquery
 //= require jquery_ujs
 
-import '../packs/delete'
-import '../packs/append_new'
+import '../packs/delete_tanks'
+import '../packs/delete_suppliers'
+import '../packs/delete_supplies'
+import '../packs/delete_fuel_type'
+import '../packs/append_new_tank'
+import '../packs/append_new_supplier'
+import '../packs/append_new_supply'
+import '../packs/append_new_fuel_type'

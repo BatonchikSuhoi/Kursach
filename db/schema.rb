@@ -10,15 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_04_091844) do
+ActiveRecord::Schema.define(version: 2020_12_06_161553) do
 
   create_table "fuel_types", force: :cascade do |t|
     t.string "name"
-    t.integer "supplier_id"
     t.decimal "cost"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["supplier_id"], name: "index_fuel_types_on_supplier_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -40,7 +38,6 @@ ActiveRecord::Schema.define(version: 2020_12_04_091844) do
   end
 
   create_table "supplies", force: :cascade do |t|
-    t.integer "quantity"
     t.integer "fuel_quantity"
     t.integer "fuel_type_id"
     t.integer "supplier_id"

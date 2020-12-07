@@ -1,3 +1,7 @@
+body {
+    background-color: lightgray !important
+    }
+
 table {
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     font-size: 14px;
@@ -5,17 +9,18 @@ table {
     text-align: center;
     }
     th, td:first-child {
-    background: #AFCDE7;
+    background: #333333;
     color: white;
     padding: 10px 20px;
     }
     th, td {
     border-style: solid;
     border-width: 0 1px 1px 0;
-    border-color: white;
+    border-color: gray;
+    color: white;
     }
     td {
-    background: #D8E6F3;
+    background: #333333;
     }
     th:first-child, td:first-child {
     text-align: left;
@@ -62,3 +67,31 @@ table {
 .add .btn {
     margin: 5px;
 }
+
+.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .wrapper {
+      margin-top: 20px;
+  }

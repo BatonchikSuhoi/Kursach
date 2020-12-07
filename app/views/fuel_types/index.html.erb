@@ -1,6 +1,6 @@
 <table>
     <tr>
-      <th></th>
+      <td>Тип топлива</td>
       <% @all_fuel_types.each do |fuel_type| %>
         <th><%= fuel_type.name %></th>
       <% end %>
@@ -8,7 +8,7 @@
      <tr>
       <td>Цена</td>
       <% @all_fuel_types.each do |fuel_type| %>
-        <td><%= fuel_type.cost %></td>
+        <td><%= fuel_type.cost %> / л</td>
       <% end %>
      </tr>
      <tr>
@@ -19,17 +19,17 @@
      </tr>
 </table>
 <div class="nav-buttons">
-  <button class="btn btn-primary append-new-fuel-type" type="submit">Добавить</button>
-  <button class="btn btn-primary update-fuel-type">Редактировать</button>
-  <button class="btn btn-primary delete-fuel-type">Удалить</button>
+  <!-- <button class="btn btn-success append-new-fuel-type" type="submit">Добавить</button> -->
+  <button class="btn btn-dark update-fuel-type">Редактировать</button>
+  <!-- <button class="btn btn-danger delete-fuel-type">Удалить</button> 
 </div>
 <div class="add">
   <input type="text" class="fuel-name"> - "Название топлива"<br />
   <input type="text" class="fuel-cost"> - "Цена"<br />
   <button class="btn btn-success add-new-fuel-type" type="submit">Добавить</button>
-</div>
+</div> -->
 <div class="update">
-  <input type="text" class="u_fuel-name"> - "НАзвание топлива"<br />
+  <input type="text" class="u_fuel-name"> - "Название топлива"<br />
   <input type="text" class="u_fuel-cost"> - "Цена"<br />
   <button class="btn btn-success update-old-fuel-type" type="submit">Обновить</button>
 </div>

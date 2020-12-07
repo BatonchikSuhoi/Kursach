@@ -1,12 +1,12 @@
 <table>
     <tr>
-      <th></th>
+      <td>Номер поставки</td>
       <% @all_supplies.each do |supply| %>
         <th><%= supply.id %></th>
       <% end %>
     </tr>
      <tr>
-      <td>Еоличество топлива</td>
+      <td>Количество топлива</td>
       <% @all_supplies.each do |supply| %>
         <td><%= supply.fuel_quantity %></td>
       <% end %>
@@ -24,6 +24,12 @@
       <% end %>
      </tr>
      <tr>
+      <td>Дата поставки</td>
+      <% @all_supplies.each do |supply| %>
+        <td><%= supply.created_at %></td>
+      <% end %>
+     </tr>
+     <tr>
       <th></th>
       <% @all_supplies.each do |supply| %>
         <th><input id=<%= supply.id %> class="user-checkbox" type="checkbox"></th>
@@ -31,9 +37,9 @@
      </tr>
 </table>
 <div class="nav-buttons">
-  <button class="btn btn-primary append-new-supply" type="submit">Добавить</button>
-  <button class="btn btn-primary update-supply">Редактировать</button>
-  <button class="btn btn-primary delete-supply">Удалить</button>
+  <button class="btn btn-success append-new-supply" type="submit">Добавить</button>
+  <!--<button class="btn btn-dark update-supply">Редактировать</button> -->
+  <button class="btn btn-danger delete-supply">Удалить</button>
 </div>
 <div class="add">
   <input type="text" class="fuel_quantity"> - "Количество"<br />

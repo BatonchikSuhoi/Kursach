@@ -1,6 +1,6 @@
 <table>
     <tr>
-      <th></th>
+      <td>Поставщик</td>
       <% @all_suppliers.each do |supplier| %>
         <th><%= supplier.name %></th>
       <% end %>
@@ -25,9 +25,9 @@
      </tr>
 </table>
 <div class="nav-buttons">
-  <button class="btn btn-primary append-new-supplier" type="submit">Добавить</button>
-  <button class="btn btn-primary update-supplier">Редактировать</button>
-  <button class="btn btn-primary delete-supplier">Удалить</button>
+  <button class="btn btn-success append-new-supplier" type="submit">Добавить</button>
+  <button class="btn btn-dark update-supplier">Редактировать</button>
+  <button class="btn btn-danger delete-supplier">Удалить</button>
 </div>
 <div class="add">
   <input type="text" class="supplier-name"> - "Имя поставщика"<br />

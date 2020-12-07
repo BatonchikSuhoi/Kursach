@@ -8,10 +8,10 @@ $(document).ready(() => {
       $('.user-checkbox').prop('checked', e.target.checked);
     });
   
-    $('.delete_tanks').click(() => {
+    $('.delete-order').click(() => {
       let userIds = $('.user-checkbox:checked').toArray().map(a => a.id);
       $.ajax({
-        url: '/tanks/destroy',
+        url: '/orders/destroy',
         method: 'delete',
         data: {
           user_ids: userIds

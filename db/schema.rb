@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_06_161553) do
+ActiveRecord::Schema.define(version: 2020_12_07_191759) do
 
   create_table "fuel_types", force: :cascade do |t|
     t.string "name"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2020_12_06_161553) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.string "name"
     t.integer "fuel_quantity"
     t.integer "bill"
     t.integer "fuel_type_id"
@@ -49,7 +48,7 @@ ActiveRecord::Schema.define(version: 2020_12_06_161553) do
 
   create_table "tanks", force: :cascade do |t|
     t.integer "max_volume", null: false
-    t.decimal "fullness", null: false
+    t.integer "fullness", null: false
     t.integer "fuel_type_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

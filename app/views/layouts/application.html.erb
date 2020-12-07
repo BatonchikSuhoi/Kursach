@@ -13,17 +13,19 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="header">
-        <div class="header-right">
-          <a href="/tanks">Цистерны</a>
-          <a href="/fuel_types">Типы топлива</a>
-          <a href="#orders">Заказы</a>
-          <a href="/supplies">Поставки</a>
-          <a href="/suppliers">Поставщики</a>
-        </div>
+    <div class="topnav">
+      <div class='container'>
+      <li><a href="/tanks">Цистерны</a></li>
+      <li><a href="/fuel_types">Типы топлива</a></li>
+      <li><a href="/orders">Заказы</a></li>
+      <li><a href="/supplies">Поставки</a></li>
+      <li><a href="/suppliers">Поставщики</a></li>
       </div>
-      <%= yield %>
+    </div>
+    <div class="container">
+      <div class="wrapper">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

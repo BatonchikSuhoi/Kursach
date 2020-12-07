@@ -1,6 +1,6 @@
 <table>
     <tr>
-      <th></th>
+      <td>Номер цистерны</td>
       <% @all_tanks.each do |tank| %>
         <th><%= tank.id %></th>
       <% end %>
@@ -20,29 +20,41 @@
      <tr>
       <td>Тип топлива</td>
       <% @all_tanks.each do |tank| %>
-        <td><%= tank.fuel_type_id %></td>
+        <td><%= fuel_name_by_id(tank.fuel_type_id) %></td>
       <% end %>
      </tr>
-     <tr>
+      <!-- <tr>
       <th></th>
       <% @all_tanks.each do |tank| %>
         <th><input id=<%= tank.id %> class="user-checkbox" type="checkbox"></th>
       <% end %>
-     </tr>
+     </tr> -->
     </tr>
 </table>
+<!-- 
 <div class="nav-buttons">
-  <button class="btn btn-primary append-new-tank" type="submit">Добавить</button>
-  <button class="btn btn-primary update-tank">Редактировать</button>
-  <button class="btn btn-primary delete-tank">Удалить</button>
+  <button class="btn btn-success append-new-tank" type="submit">Добавить</button>
+  <button class="btn btn-dark update-tank">Редактировать</button>
+  <button class="btn btn-danger delete_tanks">Удалить</button>
 </div>
 <div class="add">
   <input type="text" class="max-volume"> - "Объем цистерны"<br />
   <input type="text" class="fullness"> - "Наполненность"<br />
+  <select class="fuel_type_id">
+    <% @fuel_types.each do |type| %>
+      <option value=<%= type.id %>><%= type.name %></option>
+    <% end %>
+  </select> - "Тип топлива"<br />
   <button class="btn btn-success add-new-tank" type="submit">Добавить</button>
 </div>
 <div class="update">
   <input type="text" class="u_max-volume"> - "Объем цистерны"<br />
   <input type="text" class="u_fullness"> - "Наполненность"<br />
+  <select class="u_fuel_type_id">
+    <% @fuel_types.each do |type| %>
+      <option value=<%= type.id %>><%= type.name %></option>
+    <% end %>
+  </select> - "Тип топлива"<br />
   <button class="btn btn-success update-old-tank" type="submit">Обновить</button>
 </div>
+-->

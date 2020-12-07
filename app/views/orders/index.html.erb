@@ -1,0 +1,51 @@
+<table>
+    <tr>
+      <td>Номер заказа</td>
+      <% @all_orders.each do |order| %>
+        <th><%= order.id %></th>
+      <% end %>
+    </tr>
+     <tr>
+      <td>Количество топлива</td>
+      <% @all_orders.each do |order| %>
+        <td><%= order.fuel_quantity %></td>
+      <% end %>
+     </tr>
+     <tr>
+      <td>Стоимость</td>
+      <% @all_orders.each do |order| %>
+        <td><%= order.bill %> руб.</td>
+      <% end %>
+     </tr>
+     <tr>
+      <td>Тип топлива</td>
+      <% @all_orders.each do |order| %>
+        <td><%= fuel_name_by_id(order.fuel_type_id) %></td>
+      <% end %>
+     </tr>
+     <tr>
+      <td>Дата заказа</td>
+      <% @all_orders.each do |order| %>
+        <td><%= order.created_at %></td>
+      <% end %>
+     </tr>
+     <tr>
+      <th></th>
+      <% @all_orders.each do |order| %>
+        <th><input id=<%= order.id %> class="user-checkbox" type="checkbox"></th>
+      <% end %>
+     </tr>
+</table>
+<div class="nav-buttons">
+  <button class="btn btn-success append-new-order" type="submit">Добавить</button>
+  <button class="btn btn-danger delete-order">Удалить</button>
+</div>
+<div class="add">
+  <input type="text" class="fuel_quantity"> - "Количество"<br />
+  <select class="fuel_type_id">
+    <% @fuel_types.each do |type| %>
+      <option value=<%= type.id %>><%= type.name %></option>
+    <% end %>
+  </select> - "Тип топлива"<br />
+  <button class="btn btn-success add-new-order" type="submit">Добавить</button>
+</div>

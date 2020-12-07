@@ -29,12 +29,14 @@ $(document).ready(() => {
     $('.add-new-tank').on('click', function() {
         let max_volume = $('.max-volume').val();
         let fullness = $('.fullness').val();
+        let fuel_type = $('.fuel_type_id').val();
         $.ajax({
             url: '/tanks',
             method: 'post',
             data: {
                 max_volume: max_volume,
-                fullness: fullness
+                fullness: fullness,
+                fuel_type_id: fuel_type
             },
             success: (data) => {
               window.location.reload();
@@ -46,12 +48,14 @@ $(document).ready(() => {
         let userId = $('.user-checkbox:checked').toArray().map(a => a.id)[0];
         let max_volume = $('.u_max-volume').val();
         let fullness = $('.u_fullness').val();
+        let fuel_type = $('.u_fuel_type_id').val();
         $.ajax({
             url: '/tanks/' + userId.toString(),
             method: 'put',
             data: {
                 max_volume: max_volume,
-                fullness: fullness
+                fullness: fullness,
+                fuel_type_id: fuel_type
             },
             success: (data) => {
               window.location.reload();

@@ -6,7 +6,7 @@ class FuelTypesController < ApplicationController
 
     def create
         @fuel_type = FuelType.new(name: params[:name],
-                                  cost: params[:fuel_cost].to_i).save
+                                  cost: params[:cost].to_d).save
     end
 
     def update
